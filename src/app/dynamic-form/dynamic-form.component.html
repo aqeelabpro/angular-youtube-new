@@ -1,0 +1,19 @@
+<nav class="navbar-nav bg-body-secondary navbar-expand-lg">
+    <ul>
+        <li style="list-style: none;">Angular</li>
+    </ul>
+</nav>
+<div class="container">
+    <form [formGroup]="dynamicFormGroup">
+        <ng-container formArrayName="dynamicControls; let i = index" class="mt-5">
+            <div *ngIf="doesFormHasControls">
+                <input class="form-control mt-2" type="text"
+                    *ngFor="let control of dynamicControls.controls; let i = index" placeholder="Name">
+                <input class="form-control mt-2" type="email" *ngFor="let control of dynamicControls.controls;"
+                    placeholder="Email">
+                <button (click)="removeControl()" class="btn btn-danger">Remove Control</button>
+            </div>
+            <button (click)="addControl()" class="btn btn-primary">Add Control</button>
+        </ng-container>
+    </form>
+</div>
