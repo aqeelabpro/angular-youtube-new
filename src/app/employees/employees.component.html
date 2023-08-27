@@ -1,0 +1,14 @@
+<div class="container">
+    <input #name type="text" class="form-control mt-2" placeholder="Name">
+    <input #role type="text" class="form-control mt-2" placeholder="Role">
+    <button class="btn btn-primary mt-2" (click)="createAccount(name.value,role.value)">Create Account</button>
+</div>
+<div class="conatiner">
+    <ul>
+        <li *ngFor="let employee of employees">ID: {{employee.id}} | Name: {{employee.name}} | Role: {{employee.role}}
+            <a [routerLink]="['/admin']" [queryParams]="{role:employee.role}" *ngIf="employee.role == 'admin'">ADMIN</a>
+            <a [routerLink]="['/home']" [queryParams]="{role:employee.role}" *ngIf="employee.role != 'admin'">Not
+                Admin</a>
+        </li>
+    </ul>
+</div>

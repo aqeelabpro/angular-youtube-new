@@ -7,6 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { AboutComponent } from './about/about.component';
     DynamicFormComponent,
     HomeComponent,
     AboutComponent,
+    EmployeesComponent,
+    AdminComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
