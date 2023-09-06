@@ -26,4 +26,75 @@
   </form>
 </div> -->
 <!-- <app-dynamic-form></app-dynamic-form> -->
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+<!-- <h1>Hello</h1>
+
+<ul>
+  <li *ngFor="let user of users">{{user.id}} | {{user.name}}</li>
+</ul> -->
+<!-- <p #paragraph>Paragraph Content</p>
+<button (click)="print(paragraph.textContent)">Get Paragraph</button> -->
+
+<!-- <input type="text" #input>
+<button (click)="saveInputData(input.value)">Save</button> -->
+
+<!-- <ng-template #template>Hello</ng-template>
+<ng-container #container [ngTemplateOutlet]="template"></ng-container>
+<p #paragraph>Hello Parargrpah</p>
+<app-home #home></app-home> -->
+<!-- <app-home [name]="name"></app-home>
+{{name}} -->
+<!-- product.component.html -->
+
+
+<!-- 
+
+<div class="products">
+  <div *ngFor="let product of products">
+    {{product.id}}
+    {{product.name}}
+    {{product.price}}
+  </div>
+</div>
+
+<button class="btn btn-primary mt-2 ms-3" (click)="showAdditionalData()">Show Additional Info</button>
+<ng-template [ngIf]="showAdditionalInformation">
+  <div class="products">
+    <div *ngFor="let product of products">
+      {{product.tags.join(',')}}
+    </div>
+  </div>
+</ng-template>
+
+
+<button *ngIf="isLoggedIn" class="btn btn-danger  mt-2 ms-3">Log Out</button>
+<button (click)="toggleUserAuthentication()" class="btn btn-primary mt-2 ms-3">Toggle</button>
+<ng-template [ngIf]="!isLoggedIn">
+  <button class="btn btn-success mt-2 ms-3">Log In</button>
+</ng-template>
+
+
+ -->
+
+
+<button (click)="toggleProductsView()" class="btn btn-primary">Toggle Products Preview</button>
+
+<ng-container>
+  <div *ngIf="showProducts" class="conditional">
+    <ul>
+      <li *ngFor="let product of products">
+        {{product.id}}
+        {{product.name}}
+        {{product.price}}
+      </li>
+    </ul>
+  </div>
+</ng-container>
+
+<div class="components">
+  <mat-tab-group>
+    <mat-tab *ngFor="let page of pages" [label]="page.title">
+      <ng-container [ngComponentOutlet]="page.component"></ng-container>
+    </mat-tab>
+  </mat-tab-group>
+</div>

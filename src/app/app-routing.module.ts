@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { AdminComponent } from './admin/admin.component';
+import { AppComponent } from './app.component';
 const extraOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
@@ -16,6 +17,11 @@ const routes: Routes = [
     component: AboutComponent,
     pathMatch: 'full',
   },
+  {
+    path: '',
+    component: AppComponent,
+    pathMatch: 'full',
+  },
   { path: 'employees', component: EmployeesComponent, pathMatch: 'full' },
   {
     path: 'about/:id',
@@ -25,7 +31,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full',
   },
 ];
