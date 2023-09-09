@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from './home/home.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 
 @Component({
   selector: 'app-root',
@@ -9,40 +6,37 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  pages = [
-    { title: 'home', component: HomeComponent },
-    { title: 'employees', component: EmployeesComponent },
-    { title: 'dynamic Form', component: DynamicFormComponent },
-  ];
-
-  showProducts: boolean = true;
-  toggleProductsView() {
-    this.showProducts = !this.showProducts;
-  }
-  isLoggedIn: boolean = false;
-  toggleUserAuthentication() {
-    this.isLoggedIn = !this.isLoggedIn;
-  }
-  showAdditionalInformation: boolean = false;
-  products = [
-    {
-      id: 1,
-      name: 'Samsung',
-      price: '$1000',
-      tags: ['smart phone', 'mobile phone '],
-    },
-    {
-      id: 2,
-      name: 'Apple',
-      price: '$1400',
-      tags: ['smart phone', 'mobile phone '],
-    },
-  ];
-
-  showAdditionalData() {
-    this.showAdditionalInformation = !this.showAdditionalInformation;
-  }
-
+  // pages = [
+  //   { title: 'home', component: HomeComponent },
+  //   { title: 'employees', component: EmployeesComponent },
+  //   { title: 'dynamic Form', component: DynamicFormComponent },
+  // ];
+  // showProducts: boolean = true;
+  // toggleProductsView() {
+  //   this.showProducts = !this.showProducts;
+  // }
+  // isLoggedIn: boolean = false;
+  // toggleUserAuthentication() {
+  //   this.isLoggedIn = !this.isLoggedIn;
+  // }
+  // showAdditionalInformation: boolean = false;
+  // products = [
+  //   {
+  //     id: 1,
+  //     name: 'Samsung',
+  //     price: '$1000',
+  //     tags: ['smart phone', 'mobile phone '],
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Apple',
+  //     price: '$1400',
+  //     tags: ['smart phone', 'mobile phone '],
+  //   },
+  // ];
+  // showAdditionalData() {
+  //   this.showAdditionalInformation = !this.showAdditionalInformation;
+  // }
   // @ViewChild('home') home!: HomeComponent;
   // @ViewChild('paragraph', { static: true })
   // paragraph!: ElementRef;
