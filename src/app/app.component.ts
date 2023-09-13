@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EmployeesComponent } from './employees/employees.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  employees = [
+    { id: 1, name: 'John' },
+    { id: 2, name: 'Smith' },
+  ];
+
+  components = [
+    { id: 1, name: EmployeesComponent },
+    { id: 2, name: DynamicFormComponent },
+  ];
+
   // pages = [
   //   { title: 'home', component: HomeComponent },
   //   { title: 'employees', component: EmployeesComponent },

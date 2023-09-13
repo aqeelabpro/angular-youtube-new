@@ -89,12 +89,21 @@
       </li>
     </ul>
   </div>
+</ng-container> -->
+<!-- <app-products></app-products> -->
+<!-- <ng-container>
+  <ul>
+    <li *ngFor="let employee of employees">{{employee.id}} {{employee.name}}</li>
+  </ul>
 </ng-container>
 
-<div class="components">
-  <mat-tab-group>
-    <mat-tab *ngFor="let page of pages" [label]="page.title">
-      <ng-container [ngComponentOutlet]="page.component"></ng-container>
-    </mat-tab>
-  </mat-tab-group>
-</div> -->
+<mat-tab-group>
+  <mat-tab *ngFor="let component of components" label="{{component.id}}">
+    <ng-container [ngComponentOutlet]="component.name"></ng-container>
+  </mat-tab>
+</mat-tab-group>
+
+<ng-template #template>Ng Template Content</ng-template>
+
+<ng-container *ngTemplateOutlet="template"></ng-container> -->
+<app-comments></app-comments>

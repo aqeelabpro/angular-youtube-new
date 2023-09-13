@@ -1,0 +1,25 @@
+<div class="products-container mt-5 ms-5 me-5">
+    <ul class="mt-2" style="list-style: none;">
+        <li *ngFor="let product of products">
+            {{product.id}} | {{product.name}} | {{product.price}}
+        </li>
+    </ul>
+    <button class="ms-3 btn btn-info mb-2" (click)="showAdditionalData()">View</button>
+</div>
+
+<ng-template [ngIf]="isAdditionalProductInfoHidden">
+    <ul class="mt-2" style="list-style: none;">
+        <li *ngFor="let product of products">
+            {{product.category}} | {{product.tags.join(',')}}
+        </li>
+    </ul>
+</ng-template>
+<!-- <ng-template>Hello</ng-template> -->
+
+
+<button (click)="toggleTheUserAuthentication()" class="btn btn-info ms-4 mt-4">Toggle</button>
+<button *ngIf="isLoggedIn" class="btn btn-danger ms-4 mt-4">Log Out</button>
+
+<ng-template [ngIf]="!isLoggedIn">
+    <button class="btn btn-primary mt-4 ms-3">Log In</button>
+</ng-template>
