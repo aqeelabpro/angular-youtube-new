@@ -12,4 +12,7 @@ export class DataService {
   fetchData(): Observable<Comments[]> {
     return this.http.get<Comments[]>(`${this.baseUrl}/comments`);
   }
+  saveComments(body: Comments) {
+    return this.http.post(`${this.baseUrl}/comments`, body);
+  }
 }

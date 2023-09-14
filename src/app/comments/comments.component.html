@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<!-- <div class="container mt-5">
     <table>
         <tr>
             <th>ID</th>
@@ -15,4 +15,14 @@
             <td>{{comment.email}}</td>
         </tr>
     </table>
+</div> -->
+
+
+<div class="container mt-5 ms-5">
+    <form (ngSubmit)="sendComments()" [formGroup]="formGroup">
+        <input class="form-control" formControlName="name" type="text" placeholder="Enter Name">
+        <input class="form-control mt-2" formControlName="email" type="email" placeholder="Enter Email">
+        <input class="form-control mt-2" formControlName="body" type="text" placeholder="Enter Body">
+        <button class="btn btn-success mt-2" type="submit">Send Comments</button>
+    </form>
 </div>
