@@ -1,4 +1,4 @@
-<!-- <div class="container mt-5">
+<div class="container mt-5">
     <table>
         <tr>
             <th>ID</th>
@@ -6,6 +6,7 @@
             <th>Name</th>
             <th>Body</th>
             <th>Email</th>
+            <th>Actions</th>
         </tr>
         <tr *ngFor="let comment of comments">
             <td>{{comment.id}}</td>
@@ -13,11 +14,13 @@
             <td>{{comment.name}}</td>
             <td>{{comment.body}}</td>
             <td>{{comment.email}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteComment(comment.id)">Delete</button>
+            </td>
         </tr>
     </table>
-</div> -->
-
-
+</div>
+<!-- 
 <div class="container mt-5 ms-5">
     <form (ngSubmit)="sendComments()" [formGroup]="formGroup">
         <input class="form-control" formControlName="name" type="text" placeholder="Enter Name">
@@ -25,4 +28,4 @@
         <input class="form-control mt-2" formControlName="body" type="text" placeholder="Enter Body">
         <button class="btn btn-success mt-2" type="submit">Send Comments</button>
     </form>
-</div>
+</div> -->

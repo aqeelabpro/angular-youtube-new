@@ -45,4 +45,13 @@ export class CommentsComponent implements OnInit {
         console.log(comments);
       });
   }
+
+  deleteComment(commentId: number) {
+    this.dataService.deleteCommentByCommentId(commentId).subscribe((data) => {
+      this.comments = this.comments.filter(
+        (comment) => comment.id !== commentId
+      );
+      console.log('Comment Deleted Successfully with commentId' + commentId);
+    });
+  }
 }
